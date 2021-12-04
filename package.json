@@ -1,9 +1,10 @@
 {
-    "name": "Istrolid Private Server",
+    "name": "Istrolid-Private-Server",
     "version": "0.1.0",
     "description": "Istrolid Private Server",
     "main": "server.js",
     "dependencies": {
+        "nodejs": "^16.13.1",
         "ws": "^6.2.2"
     },
     "scripts": {
