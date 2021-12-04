@@ -1,0 +1,9 @@
+{
+    "name": "Private Server (VAC)",
+    "port": 8080,
+    "addr": "localhost",
+    "root_addr": "ws://198.199.109.223:88",
+    "allowedPlayers": ["Vaxyyy", "R26", "vew", "TempIar", "Autocarrot"],
+
+    "admins": ["Vaxyyy", "vew", "TempIar"]
+}

@@ -1,0 +1,14 @@
+{
+    "name": "Istrolid Private Server",
+    "version": "0.1.0",
+    "description": "Istrolid Private Server",
+    "main": "server.js",
+    "dependencies": {
+        "ws": "^6.2.2"
+    },
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Vaxyyy"
+}
