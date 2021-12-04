@@ -3186,7 +3186,7 @@ zjson - binary json sirelizer with some strange features
 
 		Sim.prototype.state = "waiting";
 
-		Sim.prototype.serverType = "rts1";
+		Sim.prototype.serverType = "rts3";
 
 		Sim.prototype.lastId = 0;
 
@@ -3336,17 +3336,8 @@ zjson - binary json sirelizer with some strange features
 			if (this.serverType === "3v3") {
 				return 3;
 			}
-			if (this.serverType === "rts1") {
-				return 1;
-			}
-			if (this.serverType === "rts2") {
-				return 2;
-			}
-			if (this.serverType === "rts3") {
-				return 3;
-			}
-			if (this.serverType === "rts4") {
-				return 4;
+			if (this.serverType.slice(0, 3) === "rst") {
+				return this.serverType.slice(3, 4);
 			}
 			return 3;
 		};
