@@ -2570,7 +2570,7 @@ zjson - binary json sirelizer with some strange features
 		}
 		if (sim.serverType === "survival") {
 			survival.genSurvival();
-		} else if (sim.serverType.includes("rts") || sim.serverType == "2v2") {
+		} else if (sim.serverType.includes("rts")) {
 			genSymetricalRTS();
 		} else {
 			genSymetrical();
@@ -3172,7 +3172,7 @@ zjson - binary json sirelizer with some strange features
 
 		Sim.prototype.state = "waiting";
 
-		Sim.prototype.serverType = "rts3";
+		Sim.prototype.serverType = "rts1";
 
 		Sim.prototype.lastId = 0;
 
@@ -3322,7 +3322,7 @@ zjson - binary json sirelizer with some strange features
 			if (this.serverType === "3v3") {
 				return 3;
 			}
-			if (this.serverType.slice(0, 3) === "rst") {
+			if (this.serverType.slice(0, 3) === "rts") {
 				return this.serverType.slice(3, 4);
 			}
 			return 3;
