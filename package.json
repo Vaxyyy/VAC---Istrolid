@@ -3,8 +3,10 @@
     "version": "0.1.0",
     "description": "Istrolid Private Server",
     "main": "server.js",
+    "engines": {
+        "npm": "6.x"
+    },
     "dependencies": {
-        "node": "^16.13.1",
         "ws": "^6.2.2"
     },
     "scripts": {
