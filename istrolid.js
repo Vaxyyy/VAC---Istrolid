@@ -2570,7 +2570,7 @@ zjson - binary json sirelizer with some strange features
 		}
 		if (sim.serverType === "survival") {
 			survival.genSurvival();
-		} else if (sim.serverType.includes("rts")) {
+		} else if (sim.serverType.includes("rts") || sim.serverType == "2v2") {
 			genSymetricalRTS();
 		} else {
 			genSymetrical();
@@ -2724,8 +2724,8 @@ zjson - binary json sirelizer with some strange features
 		sim.mapScale = 1.8 // make bigger
 		var i, a, b, ref, pos, results;
 
-		for (i = 0, ref = sim.playersPerTeam(); i < ref.length; i++) {
 
+		for (i = 0, ref = sim.playersPerTeam(); i < ref; i++) {
 			a = new types.SpawnPoint();
 			a.side = sim.alpha[i].side;
 			a.spawn = sim.alpha[i].number;
@@ -2739,20 +2739,6 @@ zjson - binary json sirelizer with some strange features
 			b.pos[0] = -a.pos[0];
 			b.pos[1] = a.pos[1];
 			sim.things[b.id] = b;
-
-			for (i = 0, ref = sim.numComPoints; i < ref; ++i) {
-				a = new types.CommandPoint();
-				a.z = -.01;
-
-				sim.things[a.id] = a;
-				b = new types.CommandPoint();
-				b.z = -.01;
-				b.pos[0] = -a.pos[0];
-				b.pos[1] = -a.pos[1];
-				a.side = "alpha";
-				b.side = "beta";
-				results.push(sim.things[b.id] = b);
-			}
 		}
 
 		pos = [];
